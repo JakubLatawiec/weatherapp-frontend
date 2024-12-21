@@ -1,0 +1,28 @@
+# modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# build
+.next
+out
+
+# IDE
+.DS_Store
+*.swp
+*.idea
+*.vscode
+
+# logs
+logs
+*.log
+
+# tmp
+*.tmp
+
+# docker
+*.Dockerfile
+
+# cache
+.cache
+coverage
