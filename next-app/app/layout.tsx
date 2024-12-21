@@ -5,13 +5,15 @@ import "./globals.css";
 const russoOne = Russo_One({
   variable: "--font-russo",
   subsets: ["latin"],
-  weight: "400"
+  weight: "400",
+  display: "swap"
 })
 
 const chakraPetch = Chakra_Petch({
   variable: "--font-chakra",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"]
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap"
 })
 
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`${russoOne.variable} ${chakraPetch.variable} antialiased`}
       >
         {children}
       </body>
