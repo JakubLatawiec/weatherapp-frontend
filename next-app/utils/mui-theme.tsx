@@ -18,6 +18,9 @@ const mui_switch = {
 }
 
 const mui_light_theme = createTheme({
+    typography: {
+        fontFamily: "'Chakra Petch', sans-serif"
+    },
     palette: {
         mode: "light",
         primary: {
@@ -40,11 +43,31 @@ const mui_light_theme = createTheme({
                     backgroundColor: "inherit"
                 }
             }
+        },
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    color: "#000",
+                    "&.Mui-selected": {
+                        color: "#fe5c01"
+                    },
+                },
+            },
+        },
+        MuiTabs: {
+            styleOverrides: {
+                indicator: {
+                    backgroundColor: "#fe5c01",
+                },
+            },
         }
     }
 })
 
 const mui_dark_theme = createTheme({
+    typography: {
+        fontFamily: "'Chakra Petch', sans-serif"
+    },
     palette: {
         mode: "dark",
         primary: {
@@ -67,6 +90,26 @@ const mui_dark_theme = createTheme({
                     backgroundColor: "inherit"
                 }
             }
+        },
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    color: "#FFF",
+                    "&.Mui-selected": {
+                        color: "#fe5c01 !important",
+                    },
+                },
+            },
+        },
+        MuiTabs: {
+            styleOverrides: {
+                root: {
+                    color: "#FFF",
+                },
+                indicator: {
+                    backgroundColor: "#fe5c01",
+                },
+            },
         }
     }
 })
