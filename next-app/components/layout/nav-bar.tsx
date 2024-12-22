@@ -8,10 +8,11 @@ const NavBar = () => {
     return (
         
         <nav className="w-full h-[48px] bg-red flex flex-row items-center justify-between">
-            <p>WA</p>
+            <p className="text-xl">WeatherApp</p>
             <ThemeContextProvider>
-                <div className="flex flex-row justify-end items-center">
+                <div className="flex flex-row justify-end items-center h-full">
                     <ThemeSwitch />
+                    <hr className="w-[1px] min-h-full mx-[12px] bg-black dark:bg-white "/>
                     <ChangeLocationButton />
                 </div>
             </ThemeContextProvider>
