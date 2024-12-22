@@ -5,11 +5,12 @@
 :root {
   --font-russo: 'Russo One', sans-serif;
   --font-chakra: 'Chakra Petch', sans-serif;
+  --color-primary: #fe5c01;
   --color-background: #FAFAFA;
-  --color-secondary: #7e7e7e;
+  --color-secondary: #e1e1e1;
 }
 
 .dark {
   --color-background: #1A1C1E;
-  --color-secondary: #282C34;
+  --color-secondary: #202329;
 }
