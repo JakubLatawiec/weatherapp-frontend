@@ -15,6 +15,7 @@ export default {
       },
       colors: {
         background: "var(--color-background)",
+        secondary: "var(--color-secondary)"
       },
     },
   },
