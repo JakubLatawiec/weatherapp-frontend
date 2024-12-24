@@ -17,6 +17,18 @@ const mui_switch = {
     }
 }
 
+const mui_modal = {
+    MuiModal: {
+        styleOverrides: {
+            root: {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            },
+        },
+    },
+}
+
 const mui_light_theme = createTheme({
     typography: {
         fontFamily: "'Chakra Petch', sans-serif"
@@ -24,11 +36,12 @@ const mui_light_theme = createTheme({
     palette: {
         mode: "light",
         primary: {
-            main: "#000"
+            main: "#fe5c01"
         }
     },
     components: {
         ...mui_switch,
+        ...mui_modal,
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
@@ -71,11 +84,12 @@ const mui_dark_theme = createTheme({
     palette: {
         mode: "dark",
         primary: {
-            main: "#FFF"
+            main: "#fe5c01"
         }
     },
     components: {
         ...mui_switch,
+        ...mui_modal,
         MuiSvgIcon: {
             styleOverrides: {
                 root: {

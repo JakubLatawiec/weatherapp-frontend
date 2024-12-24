@@ -2,11 +2,12 @@ interface WeatherStatProp {
     icon: React.ReactNode;
     value: string;
     description: string;
+    className?: string;
 }
 
-const WeatherStat: React.FC<WeatherStatProp> = ({icon, value, description}) => {
+const WeatherStat: React.FC<WeatherStatProp> = ({icon, value, description, className}) => {
     return (
-        <div className="flex flex-col items-center w-[80px] mx-[8px] text-center">
+        <div className={`flex flex-col items-center w-[80px] mx-[8px] text-center ${className || ""}`}>
             <div className="w-[32px] h-[32px] flex items-center justify-center">
                 {icon}
             </div>
