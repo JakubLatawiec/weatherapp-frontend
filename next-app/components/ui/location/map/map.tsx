@@ -3,8 +3,7 @@
 import { MapContainer, Marker, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useLocation } from '@/context/location-context';
-
+import {useRef, useEffect} from "react"
 
 const DefaultIcon = L.icon({
     iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
@@ -25,7 +24,13 @@ const Map: React.FC<MapProps> = ({
     longitude,
     onMapClick
 }) => {
-    const {location, setLocation} = useLocation();
+    const mapRef = useRef<L.Map | null>(null);
+
+    useEffect(() => {
+        if (mapRef.current) {
+            mapRef.current.setView([latitude, longitude], mapRef.current.getZoom());
+        }
+    }, [latitude, longitude])
 
     const normalizeLongitude = (lng: number) => {
         return ((lng + 180) % 360 + 360) % 360 - 180;
@@ -52,6 +57,7 @@ const Map: React.FC<MapProps> = ({
                 [90, 180]
             ]}
             maxBoundsViscosity={1.0}
+            ref={map => {mapRef.current = map}}
         >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[latitude, longitude]}>

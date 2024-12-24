@@ -28,6 +28,10 @@ const LocationModal: React.FC<LocationModalProps> = ({open, onClose}) => {
     useEffect(() => {
         if (open) {
             setTempLocation(location);
+            setErrors({ 
+                latitude: false, 
+                longitude: false 
+            });
         }
     }, [open, location])
 

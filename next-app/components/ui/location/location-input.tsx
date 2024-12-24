@@ -24,7 +24,7 @@ const LocationInput: React.FC<LocationInputProps> = ({
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        setInputValue(initialValue.toFixed(6));
+        setInputValue(initialValue.toString());
     }, [initialValue]);
 
     const isValidNumber = (value: string) => {
