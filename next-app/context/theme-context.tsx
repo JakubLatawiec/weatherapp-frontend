@@ -1,6 +1,6 @@
 "use client";
 
-import {createContext, ReactNode, useContext, useState, useMemo} from "react";
+import {createContext, ReactNode, useContext, useState, useMemo, useEffect} from "react";
 import { ThemeProvider } from "@mui/system";
 import { mui_light_theme } from "@/utils/mui/mui-light-theme";
 import { mui_dark_theme } from "@/utils/mui/mui-dark-theme";
@@ -21,7 +21,13 @@ const useThemeContext = () => {
 }
 
 const ThemeContextProvider = ({children}: {children: ReactNode}) => {
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined" && window.matchMedia) {
+            setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+        }
+    }, [])
 
     const toogleTheme = () => setIsDarkMode(prev => !prev);
 
