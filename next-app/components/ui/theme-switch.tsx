@@ -2,7 +2,7 @@
 
 import Switch from "@mui/material/Switch";
 import {ThemeProvider} from "@mui/material/styles"
-import { mui_light_theme, mui_dark_theme } from "@/utils/mui-theme";
+import { mui_light_theme, mui_dark_theme } from "@/utils/mui/mui-theme";
 import {useState, useEffect} from "react"
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useThemeContext } from "@/context/theme-context";

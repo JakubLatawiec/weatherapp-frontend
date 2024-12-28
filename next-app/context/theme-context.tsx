@@ -2,7 +2,7 @@
 
 import {createContext, ReactNode, useContext, useState, useMemo} from "react";
 import { ThemeProvider } from "@mui/system";
-import { mui_light_theme, mui_dark_theme } from "@/utils/mui-theme";
+import { mui_light_theme, mui_dark_theme } from "@/utils/mui/mui-theme";
 
 interface ThemeContextProps {
     isDarkMode: boolean;

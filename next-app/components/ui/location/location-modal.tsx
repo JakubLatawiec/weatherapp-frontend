@@ -71,7 +71,7 @@ const LocationModal: React.FC<LocationModalProps> = ({open, onClose}) => {
             open={open} 
             onClose={onClose} 
         >
-            <div className="w-[80%] bg-secondary font-chakra flex flex-col items-center justify-start p-[24px] rounded-3xl dark:text-white text-black">
+            <div className="w-[80%] max-w-[560px] bg-secondary font-chakra flex flex-col items-center justify-start p-[24px] rounded-3xl dark:text-white text-black">
                 <p className="text-lg font-russo">Change location</p>
                 <div className="w-full flex flex-col items-center mt-[16px]">
                     <LocationInput

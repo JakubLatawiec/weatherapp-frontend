@@ -1,3 +1,6 @@
+import TanstackQueryProvider from "@/components/providers/tanstack-query-provider";
+import { LocationProvider } from "@/context/location-context";
+import { ThemeContextProvider } from "@/context/theme-context";
 import type { Metadata } from "next";
 import { Russo_One, Chakra_Petch } from "next/font/google";
 import "./globals.css";
@@ -31,7 +34,13 @@ export default function RootLayout({
       <body
         className={`${russoOne.variable} ${chakraPetch.variable} antialiased`}
       >
-        {children}
+        <ThemeContextProvider>
+        <TanstackQueryProvider>
+          <LocationProvider>
+          {children}
+          </LocationProvider>
+        </TanstackQueryProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

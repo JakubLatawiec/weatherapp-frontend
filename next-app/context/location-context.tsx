@@ -22,6 +22,7 @@ const LocationProvider: React.FC<{ children: React.ReactNode }> = ({ children })
                 },
                 () => {
                     console.warn("Geolocation not available or denied.")
+                    setLocationState({latitude: 0, longitude: 0})
                 }
             );
         }
