@@ -21,7 +21,7 @@ const useDailyWeatherForecast = () => {
     return useQuery({
         queryKey: ["fetch-daily-weather-forecast", location],
         queryFn: () => fetchWeatherForecast<DailyWeatherForecastResponse>(
-            "", 
+            "daily", 
             {
                 latitude: location.latitude, 
                 longitude: location.longitude

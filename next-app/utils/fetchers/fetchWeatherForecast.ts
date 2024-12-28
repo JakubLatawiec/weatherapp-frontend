@@ -6,7 +6,7 @@ const fetchWeatherForecast = async<T>(
     params: Record<string, any>
 ) : Promise<T> => {
     const query = new URLSearchParams(params).toString();
-    const url = `${API_URL}:${API_PORT}/weatherforecast/${endpoint}?${query}`;
+    const url = `${API_URL}:${API_PORT}/api/weatherforecast/${endpoint}?${query}`;
 
     const response = await fetch(url);
 

@@ -2,7 +2,7 @@ import { useLocation } from "@/context/location-context";
 import { useQuery } from "@tanstack/react-query";
 import { fetchWeatherForecast } from "../fetchers/fetchWeatherForecast";
 
-type WeatherForecastSummaryResponse = {
+interface WeatherForecastSummaryResponse {
     location: {
         country: string;
         city: string;
