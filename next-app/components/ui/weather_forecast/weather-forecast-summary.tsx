@@ -1,13 +1,13 @@
 import { timeFormatter } from "@/utils/formatters/timeFormatter";
 import { useWeatherForecastSummary } from "@/utils/hooks/useWeatherForecastSummary"
-import { Alert, CircularProgress, Skeleton, Snackbar } from "@mui/material";
+import { Skeleton } from "@mui/material";
 import Divider from "@mui/material/Divider";
-import ErrorAlert from "../exceptions/error-alert";
-import NoData from "../exceptions/no-data";
-import { Icons } from "../icons/icons"
+import ErrorAlert from "../../exceptions/error-alert";
+import NoData from "../../exceptions/no-data";
+import { Icons } from "../../icons/icons"
 import WeatherStat from "./weather-stat"
 
-const WeekSummaryBox = () => {
+const WeatherForecastSummary = () => {
     const {data, error, isLoading} = useWeatherForecastSummary();
 
     if (isLoading) {
@@ -61,4 +61,4 @@ const WeekSummaryBox = () => {
     )
 }
 
-export default WeekSummaryBox
+export default WeatherForecastSummary

@@ -36,9 +36,9 @@ export default function RootLayout({
       >
         <ThemeContextProvider>
         <TanstackQueryProvider>
-          <LocationProvider>
+        <LocationProvider>
           {children}
-          </LocationProvider>
+        </LocationProvider>
         </TanstackQueryProvider>
         </ThemeContextProvider>
       </body>

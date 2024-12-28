@@ -1,17 +1,17 @@
 "use client"
 
-import { CircularProgress, Divider, List, Skeleton } from "@mui/material";
-import DateWeatherListItem from "./date-weather-list-item";
+import { Divider, List, Skeleton } from "@mui/material";
 import React from "react";
 import { useDailyWeatherForecast } from "@/utils/hooks/useDailyWeatherForecast";
-import ErrorAlert from "../exceptions/error-alert";
-import NoData from "../exceptions/no-data";
+import ErrorAlert from "../../exceptions/error-alert";
+import NoData from "../../exceptions/no-data";
+import DailyWeatherForecastListItem from "./daily-weather-forecast-list-item";
 
-interface DateWeatherListProps {
+interface DailyWeatherForecastListProps {
     onDaySelect: (dayIndex: number)  => void;
 }
 
-const DateWeatherList: React.FC<DateWeatherListProps> = ({ onDaySelect }) => {
+const DailyWeatherForecastList: React.FC<DailyWeatherForecastListProps> = ({ onDaySelect }) => {
     const { data, isLoading, error} = useDailyWeatherForecast();
 
     if (isLoading) {
@@ -33,7 +33,7 @@ const DateWeatherList: React.FC<DateWeatherListProps> = ({ onDaySelect }) => {
         <List className="w-full">
             {data?.daily.map((day, index) => (
                 <React.Fragment key={day.date}>
-                    <DateWeatherListItem 
+                    <DailyWeatherForecastListItem 
                         date={day.date}
                         weatherCode={day.weatherCode}
                         temperatureMin={day.temperatureMin}
@@ -47,4 +47,4 @@ const DateWeatherList: React.FC<DateWeatherListProps> = ({ onDaySelect }) => {
     )
 }
 
-export default DateWeatherList;
+export default DailyWeatherForecastList;

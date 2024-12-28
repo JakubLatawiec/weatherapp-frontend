@@ -1,9 +1,7 @@
 "use client";
 
 import Switch from "@mui/material/Switch";
-import {ThemeProvider} from "@mui/material/styles"
-import { mui_light_theme, mui_dark_theme } from "@/utils/mui/mui-theme";
-import {useState, useEffect} from "react"
+import {useEffect} from "react"
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useThemeContext } from "@/context/theme-context";
 
@@ -22,7 +20,7 @@ const ThemeSwitch = () => {
 
     return (
         <div className="flex flex-row justify-end items-center">
-            <p className="hidden sm:block font-chakra">Dark mode:</p>
+            <p className="hidden sm:block font-chakra font-medium dark:font-light">Dark mode:</p>
             <Switch 
                 checked={isDarkMode} 
                 onChange={toogleTheme}

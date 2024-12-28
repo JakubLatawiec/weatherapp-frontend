@@ -1,9 +1,12 @@
+const API_URL = process.env.API_URL;
+const API_PORT = process.env.API_PORT;
+
 const fetchWeatherForecast = async<T>(
     endpoint: string,
     params: Record<string, any>
 ) : Promise<T> => {
     const query = new URLSearchParams(params).toString();
-    const url = `https://localhost:7064${endpoint}?${query}`;
+    const url = `${API_URL}:${API_PORT}/weatherforecast/${endpoint}?${query}`;
 
     const response = await fetch(url);
 

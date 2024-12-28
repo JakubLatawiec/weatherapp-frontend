@@ -1,10 +1,10 @@
-import WeeklyWeatherBox from "@/components/layout/weekly-weather-box";
+import WeatherForecast from "@/components/layout/weather-forecast";
 import PageWrapper from "@/components/wrappers/page-wrapper";
 
 const Home = () => {
   return (
     <PageWrapper>
-      <WeeklyWeatherBox />
+      <WeatherForecast />
     </PageWrapper>
   );
 }

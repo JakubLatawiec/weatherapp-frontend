@@ -21,7 +21,7 @@ const useWeatherForecastSummary = () => {
     return useQuery({
         queryKey: ["fetch-weather-forecast-summary", location],
         queryFn: () => fetchWeatherForecast<WeatherForecastSummaryResponse>(
-            "/weatherforecast/summary", 
+            "summary", 
             {
                 latitude: location.latitude, 
                 longitude: location.longitude

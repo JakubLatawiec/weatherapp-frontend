@@ -3,19 +3,19 @@ import { useDailyWeatherForecast } from '@/utils/hooks/useDailyWeatherForecast';
 import { mapWeathercodeToDescription } from '@/utils/mappers/weathercode-description-mapper';
 import { mapWeathercodeToIcon } from '@/utils/mappers/weathercode-icon-mapper';
 import Skeleton from '@mui/material/Skeleton';
-import ErrorAlert from '../exceptions/error-alert';
-import NoData from '../exceptions/no-data';
-import { Icons } from '../icons/icons';
+import ErrorAlert from '../../exceptions/error-alert';
+import NoData from '../../exceptions/no-data';
+import { Icons } from '../../icons/icons';
 import WeatherStat from './weather-stat';
 
-interface SelectedDayWeatherProps {
-    selectedDay: number;
+interface SelectedDayWeatherForecastProps {
+    selectedDayIndex: number;
 }
 
-const SelectedDayWeather: React.FC<SelectedDayWeatherProps> = ({ selectedDay }) => {
+const SelectedDayWeatherForecast: React.FC<SelectedDayWeatherForecastProps> = ({ selectedDayIndex }) => {
     const {data, error, isLoading} = useDailyWeatherForecast();
 
-    const selectedDayData = data?.daily[selectedDay];
+    const selectedDayData = data?.daily[selectedDayIndex];
 
     if (isLoading) {
         return (
@@ -75,4 +75,4 @@ const SelectedDayWeather: React.FC<SelectedDayWeatherProps> = ({ selectedDay }) 
     )
 }
 
-export default SelectedDayWeather;
+export default SelectedDayWeatherForecast;

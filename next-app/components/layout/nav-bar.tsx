@@ -1,11 +1,8 @@
 "use client"
 
-import { ThemeContextProvider } from "@/context/theme-context";
-import ChangeLocationBox from "../ui/location/location-modal";
-import ChangeLocationButton from "../ui/change-location-button";
-import ThemeSwitch from "../ui/theme-switch";
+import ChangeLocationButton from "../ui/navbar/change-location-button";
+import ThemeSwitch from "../ui/navbar/theme-switch";
 import {useState} from "react";
-import { LocationProvider } from "@/context/location-context";
 import LocationModal from "../ui/location/location-modal";
 
 const NavBar = () => {
@@ -16,7 +13,7 @@ const NavBar = () => {
 
     return (
         <>
-        <nav className="w-full h-[48px] bg-red flex flex-row items-center justify-between">
+        <nav className="max-w-[1800px] w-full h-[48px] bg-red flex flex-row items-center justify-between">
             <p className="text-xl">Weather<span className="text-primary">App</span></p>
                 <div className="flex flex-row justify-end items-center h-full">
                     <ThemeSwitch />
