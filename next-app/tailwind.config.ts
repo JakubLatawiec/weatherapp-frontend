@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  corePlugins: {
+    preflight: false
+  },
   darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
