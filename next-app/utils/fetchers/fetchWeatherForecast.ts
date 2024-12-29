@@ -1,6 +1,5 @@
-//TODO: fix envs on Render
-const API_URL = process.env.API_URL || "https://weatherapp-backend-1ril.onrender.com";
-const API_PORT = process.env.API_PORT || "443";
+const API_URL = process.env.API_URL;
+const API_PORT = process.env.API_PORT;
 
 const fetchWeatherForecast = async<T>(
     endpoint: string,
