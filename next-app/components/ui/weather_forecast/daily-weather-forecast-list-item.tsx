@@ -22,11 +22,11 @@ const DailyWeatherForecastListItem: React.FC<DailyWeatherForecastListItemProps> 
 
     return (
         <ListItem>
-            <ListItemButton className='flex items-center w-full' onClick={onClick}>
-                <ListItemText className='w-[40%]' primary={dateFormatter(date)}/>
-                <ListItemText className='w-[20%] flex flex-row justify-center items-center opacity-60' primary={`${temperatureMin}°C`}/>
-                <ListItemText className='w-[20%] flex flex-row justify-center items-center' primary={`${temperatureMax}°C`}/>
-                <ListItemIcon className='w-[20%] flex flex-row justify-end items-center text-black dark:text-white'>
+            <ListItemButton className='!flex !items-center !w-full' onClick={onClick}>
+                <ListItemText className='!w-[40%]' primary={dateFormatter(date)}/>
+                <ListItemText className='!w-[20%] !flex !flex-row !justify-center !items-center !opacity-60' primary={`${temperatureMin}°C`}/>
+                <ListItemText className='!w-[20%] !flex !flex-row !justify-center !items-center' primary={`${temperatureMax}°C`}/>
+                <ListItemIcon className='!w-[20%] !flex !flex-row !justify-end !items-center !text-black !dark:text-white'>
                     {WeatherIcon}
                 </ListItemIcon>
             </ListItemButton>

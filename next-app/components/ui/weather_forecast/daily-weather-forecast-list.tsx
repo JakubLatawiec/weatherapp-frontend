@@ -16,7 +16,7 @@ const DailyWeatherForecastList: React.FC<DailyWeatherForecastListProps> = ({ onD
 
     if (isLoading) {
         return (
-            <Skeleton variant='rectangular' className='w-full h-[300px]' />
+            <Skeleton variant='rectangular' className='!w-full !h-[300px]' />
         )
     }
 

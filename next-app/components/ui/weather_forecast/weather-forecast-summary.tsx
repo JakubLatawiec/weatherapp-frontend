@@ -12,7 +12,7 @@ const WeatherForecastSummary = () => {
 
     if (isLoading) {
         return (
-            <Skeleton variant='rectangular' className='w-full h-[300px]' />
+            <Skeleton variant='rectangular' className='!w-full !h-[300px]' />
         )
     }
 
@@ -53,7 +53,7 @@ const WeatherForecastSummary = () => {
                     description="Average air pressure"
                 />
             </div>
-            <Divider className="w-full mt-[24px]"/>
+            <Divider className="!w-full !mt-[24px]"/>
             <div className="w-full mt-[24px] text-center font-chakra">
                 <p>{data?.summary.weekSummary}</p>
             </div>

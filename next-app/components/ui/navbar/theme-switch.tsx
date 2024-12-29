@@ -24,9 +24,9 @@ const ThemeSwitch = () => {
             <Switch 
                 checked={isDarkMode} 
                 onChange={toogleTheme}
-                className="mr-0 sm:mr-[-8px]"
+                className="!mr-0 !sm:mr-[-8px]"
             />
-            <DarkModeIcon className="ml-[-4px] block sm:hidden"/>
+            <DarkModeIcon className="!ml-[-4px] !block !sm:hidden"/>
         </div>
     )
 }
