@@ -19,7 +19,7 @@ const SelectedDayWeatherForecast: React.FC<SelectedDayWeatherForecastProps> = ({
 
     if (isLoading) {
         return (
-            <Skeleton variant='rectangular' className='w-full h-[360px]' />
+            <Skeleton variant='rectangular' className='!w-full !h-[360px]' />
         )
     }
 
