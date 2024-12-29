@@ -81,7 +81,7 @@ const LocationModal: React.FC<LocationModalProps> = ({open, onClose}) => {
                         onError={hasError => handleErrorChange("latitude", hasError)}
                         min={-90}
                         max={90}
-                        className="w-[200px]"
+                        className="!w-[200px]"
                     />
                     <LocationInput
                         label="Longitude"
@@ -90,7 +90,7 @@ const LocationModal: React.FC<LocationModalProps> = ({open, onClose}) => {
                         onError={hasError => handleErrorChange("longitude", hasError)}
                         min={-180}
                         max={180}
-                        className="w-[200px] mt-[16px]"
+                        className="!w-[200px] !mt-[16px]"
                     />
                 </div>
                 <div className="w-full h-[300px] mt-[36px]">
