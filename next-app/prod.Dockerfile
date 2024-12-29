@@ -2,15 +2,13 @@ FROM node:18 AS base
 
 WORKDIR /app
 
-COPY package.json ./
+COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm install --omit=dev
 
 COPY . .
 
 RUN npm run build
-
-RUN npm prune --production
 
 EXPOSE 3000
 
