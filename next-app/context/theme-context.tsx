@@ -4,6 +4,7 @@ import {createContext, ReactNode, useContext, useState, useMemo, useEffect} from
 import { ThemeProvider } from "@mui/system";
 import { mui_light_theme } from "@/utils/mui/mui-light-theme";
 import { mui_dark_theme } from "@/utils/mui/mui-dark-theme";
+import { CssBaseline } from "@mui/material";
 
 interface ThemeContextProps {
     isDarkMode: boolean;
@@ -42,6 +43,7 @@ const ThemeContextProvider = ({children}: {children: ReactNode}) => {
     return (
         <ThemeContext.Provider value={value}>
             <ThemeProvider theme={isDarkMode? mui_dark_theme : mui_light_theme}>
+                <CssBaseline />
                 {children}
             </ThemeProvider>
         </ThemeContext.Provider>

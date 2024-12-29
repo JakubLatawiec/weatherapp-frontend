@@ -100,7 +100,8 @@ const LocationModal: React.FC<LocationModalProps> = ({open, onClose}) => {
                          onMapClick={handleMapClick}
                     />
                 </div>
-                <Button 
+                <Button
+                    sx={{marginTop: "24px"}} 
                     className="mt-[24px]" 
                     variant="contained"
                     onClick={handleApply}
